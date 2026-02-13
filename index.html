@@ -243,10 +243,6 @@ background: url('anez.jpeg') no-repeat center center;
 </head>
 <body>
 
-    <audio loop controls autoplay>
-  <source src="song.mp3" type="audio/mpeg">
-  <source src="song1.m4a" type="audio/mpeg">
-</audio>
 
 <!-- Floating hearts script -->
 <script>
@@ -274,7 +270,8 @@ for (let i = 0; i < 20; i++) {
 <!-- Final card -->
 <div class="card final" id="final">
     <audio loop controls autoplay>
-  <source src="/song.mp3" type="audio/mpeg">
+  <source src="song.mp3" type="audio/mpeg">
+  <source src="song1.m4a" type="audio/mpeg">
 </audio>
     <div class="heart-big">❤︎</div>
     <h1>ما شاء الله</h1>
@@ -343,7 +340,7 @@ function fireworksFinale() {
     for (let i = 0; i < 6; i++) {
         const f = document.createElement("div");
         f.className = "firework";
-        f.innerText = "🤍";
+        f.innerText = "🍆";
         f.style.left = Math.random() * 100 + "vw";
         f.style.top = Math.random() * 50 + "vh";
         document.body.appendChild(f);
@@ -384,6 +381,7 @@ yesBtn.addEventListener("click", () => {
 </script>
 </body>
 </html>
+
 
 
 
