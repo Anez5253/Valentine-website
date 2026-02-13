@@ -269,7 +269,7 @@ for (let i = 0; i < 20; i++) {
 
 <!-- Final card -->
 <div class="card final" id="final">
-    <audio autoplay>
+    <audio id="myAudio" autoplay>
   <source src="song.mp3" type="audio/mpeg">
   <source src="song1.m4a" type="audio/mpeg">
 </audio>
@@ -282,6 +282,20 @@ for (let i = 0; i < 20; i++) {
 
 
 <script>
+
+    window.addEventListener('DOMContentLoaded', () => {
+  const audio = document.getElementById('myAudio');
+  // Try to play the audio
+  audio.play().catch((error) => {
+    console.log('Autoplay blocked:', error);
+    // Optionally show a button for the user to start playback
+    const btn = document.createElement('button');
+    btn.textContent = 'Play Music';
+    btn.onclick = () => audio.play();
+    document.body.appendChild(btn);
+  });
+});
+    
 const questions = [
     "Do you love me?",
     "Do you trust me?",
@@ -381,6 +395,7 @@ yesBtn.addEventListener("click", () => {
 </script>
 </body>
 </html>
+
 
 
 
