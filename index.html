@@ -285,17 +285,17 @@ for (let i = 0; i < 20; i++) {
 
     const audio = document.getElementById('myAudio');
 
-    document.getElementById('yesBtn').addEventListener('click', () => {
-    // Show the final div
-    // const finalDiv = document.getElementById('final');
-    // final.style.display = 'block';
+    // document.getElementById('yesBtn').addEventListener('click', () => {
+    // // Show the final div
+    // // const finalDiv = document.getElementById('final');
+    // // final.style.display = 'block';
 
-    // Play music now — browser allows it because this is triggered by a user click
-    audio.play().catch((err) => {
-        console.log('Play failed:', err);
-    });
+    // // Play music now — browser allows it because this is triggered by a user click
+    // audio.play().catch((err) => {
+    //     console.log('Play failed:', err);
+    // });
 
-        });
+    //     });
     
 const questions = [
     "Do you love me?",
@@ -391,11 +391,15 @@ yesBtn.addEventListener("click", () => {
         card.style.display = "none";
         final.style.display = "block";
         fireworksFinale();
+        audio.play().catch((err) => {
+        console.log('Play failed:', err);
+    });
     }
 });
 </script>
 </body>
 </html>
+
 
 
 
